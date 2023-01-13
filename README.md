@@ -10,8 +10,8 @@ XRFitProc, is a novel web-based application developed in [Python](https://www.py
 After cloning the repository locally, you will need to install and setup an [Anaconda](https://www.anaconda.com/products/distribution) environment with all needed dependencies. This can be achieved by opening a terminal in the "modules" folder and by copying and pasting the following lines of code:
 
 ```
-conda create -n py3 python=3.8
-conda activate py3
+conda create -n XRF python=3.8
+conda activate XRF
 conda install numpy scipy h5py matplotlib flask numba pandas
 conda install -c conda-forge dash dash-bootstrap-components plotly xraydb dash-html-components dash-core-components tifffile
 conda install -c numba icc_rt
@@ -21,7 +21,7 @@ conda install -c numba icc_rt
 ### Initialization
 Once the setup is complete, run the application by entering the "modules" folder and executing the following commands in a shell:
 ```
-conda activate py3
+conda activate XRF
 ```
 and
 ```
