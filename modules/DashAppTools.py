@@ -24,10 +24,10 @@ from flask import redirect
 
 
 class class_XRFitProc_webapp:        
-    def __init__(self,url_base_pathname):
+    def __init__(self):
         
         # define app class attributes
-        self.app = dash.Dash(name='XRFitProc',external_stylesheets = [dbc.themes.MATERIA], url_base_pathname=url_base_pathname)
+        self.app = dash.Dash(name='XRFitProc',external_stylesheets = [dbc.themes.MATERIA])
         self.app.title = "XRFitProc"
                         
         # hardcoded initialisations
