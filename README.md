@@ -30,7 +30,7 @@ chmod +x run_xrfitproc.sh
 ./run_xrfitproc.sh --port 8080 --dash_debug False
 ```
 where the port number and debugging flag can be tuned manually. Once the application is running the user will be able to access it in their web-browser of choice, by navigating to the Url http://127.0.0.1:8080/. The command line should look as in the figure below.
-<img src=https://github.com/m-ippoliti/XRFitProc/blob/main/images/run_xrfitproc.png alt="run_xrfitproc"/>
+<img src=https://github.com/ElettraSciComp/XRFitProc/blob/main/images/run_xrfitproc.png alt="run_xrfitproc"/>
 
 
 ### Load Data
@@ -46,7 +46,7 @@ Alternatively, users can also attempt to construct their own [HDF5](https://www.
  * **offset**: float scalar, used to calibrate channel axis to actual energy axis in eV 
  * **slope**: float scalar, used to calibrate channel axis to actual energy axis in eV
 
-<div align="center"><img src=https://github.com/m-ippoliti/XRFitProc/blob/main/images/data_structure.png alt="data_structure"/></div>
+<div align="center"><img src=https://github.com/ElettraSciComp/XRFitProc/blob/main/images/data_structure.png alt="data_structure"/></div>
 
 The slope and offset parameters, are necessary in order to calibrate the channels axis belonging to the spectral data, into an energy axis expressed in eV, according to the linear relationship 
 
@@ -58,7 +58,7 @@ where x represents the channel axis. In the above example the spectroscopic data
 
 
 ### Fit Setup
-<img src=https://github.com/m-ippoliti/XRFitProc/blob/main/images/GUI.png alt="data_structure"/>
+<img src=https://github.com/ElettraSciComp/XRFitProc/blob/main/images/GUI.png alt="data_structure"/>
 
 In the "Fit Parameters" tab, after the data has been correclty loaded, a single spectra resulting from summing together all the available pixels is displayed in the "Sum Spectra" section. The parameters in the "Fit Setup" section need now to be adjusted:
 * **Beam Energy**: is loaded automatically from the HDF5 file, but can be changed to tune to the scattering peak. This value is also used to establish the energetically viable XRF emission lines for all elements
@@ -71,6 +71,6 @@ Lastly, the user has to select which XRF lines he/she would like to investigate,
 ### Batch Fitting
 In the “Batch Fitting” tab of XRFitProc, it is possible to run a pixel-wise fitting using the setup adopted in the "Fit Setup" tab. Once the fitting is over, the application displays the elemental presence maps in 2D on the left, which are obtained by summing together all the 2D maps of every XRF line belonging to a specific element. This is done for qualitative identification of areas where the element of interest is present. By hovering over any pixel in any of the presented elemental maps, the raw data and fits of all the XRF components are automatically displayed in a graph on the right side of the page. In this manner the user can immediately inspect and evaluate the results at the single pixel level. Lastly, the 2D maps of each single XRF line can be saved to disk in HDF5 format. The elemental presence maps can also be saved in HDF5 and also in .tiff 
 
-<img src=https://github.com/m-ippoliti/XRFitProc/blob/main/images/BF_res.png alt="BF_res"/>
+<img src=https://github.com/ElettraSciComp/XRFitProc/blob/main/images/BF_res.png alt="BF_res"/>
 
 </div>
