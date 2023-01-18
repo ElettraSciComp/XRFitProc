@@ -20,12 +20,14 @@ pip install dash==2.7.0 dash-bootstrap-components dash-html-components dash-core
 
 ## Running XRFitProc
 ### Initialization
-![alt text](https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/Initialization.gif)
 Once the setup is complete, run the application by entering the "modules" folder and executing the following commands in a shell:
 ```
 conda activate XRF
 ```
 and
+
+![alt text](https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/Initialization.gif)
+
 ```
 chmod +x run_xrfitproc.sh
 ./run_xrfitproc.sh --port 8080 --dash_debug False
