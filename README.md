@@ -7,6 +7,7 @@ Source code of web app developed for manuscript: "XRFitProc: a novel web-based X
 XRFitProc, is a novel web-based application developed in [Python](https://www.python.org/), [Numba](https://numba.pydata.org/), and [Dash](https://plotly.com/dash/). The aim of the algorithm is to enable users to fit X-Ray Fluorescence (XRF) spectral data, within a straight-fortward and easy to use GUI. In particular, the presented application has been designed on XRF spectroscopy data acquired on the LEXRF system present at the [TwinMic](https://www.elettra.trieste.it/elettra-beamlines/twinmic.html) beamline in Elettra Sincrotrone Trieste (Trieste, Italy), but can be used on XRF sepctroscopic data acquired on any setup, provided a specific structure is provided in the input data. 
 
 ## Installation
+![alt text](https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/installation.gif)
 After cloning the repository locally, you will need to install and setup an [Anaconda](https://www.anaconda.com/products/distribution) environment with all needed dependencies. This can be achieved by opening a terminal in the "modules" folder and by copying and pasting the following lines of code:
 
 ```
@@ -37,6 +38,7 @@ where the port number and debugging flag can be tuned manually. Once the applica
 
 ### Load Data
 #### Example Data
+![alt text](https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/data_load.gif)
 We have provided an example dataset [here](https://dx.doi.org/10.34965/i10645), originally acquired in a study by [Marmorato et. al.](https://doi.org/10.1016/j.toxlet.2011.08.026). In order for the application to work, the "xrf_flat_scan_aligned_2fit.h5" file present at the given link, must be saved to the folder "/XRFitProc/modules/data/input/".
 
 
@@ -60,7 +62,7 @@ where x represents the channel axis. In the above example the spectroscopic data
 
 
 ### Fit Setup
-<img src=https://github.com/ElettraSciComp/XRFitProc/blob/main/images/GUI.png alt="data_structure"/>
+![alt text](https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/fit_setup.gif)
 
 In the "Fit Parameters" tab, after the data has been correclty loaded, a single spectra resulting from summing together all the available pixels is displayed in the "Sum Spectra" section. The parameters in the "Fit Setup" section need now to be adjusted:
 * **Beam Energy**: is loaded automatically from the HDF5 file, but can be changed to tune to the scattering peak. This value is also used to establish the energetically viable XRF emission lines for all elements
@@ -70,7 +72,10 @@ In the "Fit Parameters" tab, after the data has been correclty loaded, a single 
  
 Lastly, the user has to select which XRF lines he/she would like to investigate, by selecting and adding the element to which they belong to in the dropdown menu present in the "XRF Lines" section. Thanks to the "Beam Energy parameter" all energetically viable XRF lines associated to a given element will be added automatically, by simply selecting the element of interest. The lines are added in bulk, but the user is free to remove any single one independently.
 
+<img src=https://github.com/ElettraSciComp/XRFitProc/blob/main/images/GUI.png alt="data_structure"/>
+
 ### Batch Fitting
+![alt text](https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/batch_fit.gif)
 In the “Batch Fitting” tab of XRFitProc, it is possible to run a pixel-wise fitting using the setup adopted in the "Fit Setup" tab. Once the fitting is over, the application displays the elemental presence maps in 2D on the left, which are obtained by summing together all the 2D maps of every XRF line belonging to a specific element. This is done for qualitative identification of areas where the element of interest is present. By hovering over any pixel in any of the presented elemental maps, the raw data and fits of all the XRF components are automatically displayed in a graph on the right side of the page. In this manner the user can immediately inspect and evaluate the results at the single pixel level. Lastly, the 2D maps of each single XRF line can be saved to disk in HDF5 format. The elemental presence maps can also be saved in HDF5 and also in .tiff 
 
 <img src=https://github.com/ElettraSciComp/XRFitProc/blob/main/images/BF_res.png alt="BF_res"/>
