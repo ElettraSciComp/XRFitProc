@@ -1,0 +1,29 @@
+# elements and lines fitted
+C = Ka3 (266.2), Ka2 (277), Ka1 (277)
+O = Ka3 (501.5), Ka2 (524.9), Ka1 (524.9)
+Na = Ka3 (1007.3), Ka2 (1040.4), Ka1 (1040.3)
+Mg = Ka3 (1214.4), Ka2 (1253.4), Ka1 (1253.79), Kb3 (1302), Kb1 (1302)
+
+# incident beam energy
+beam_en = 1495
+
+# calibration parameters
+slope = 0.00179926
+offset = -0.166375
+
+# fit boundaries parameters
+channels_lb = 190
+channels_ub = 1020
+
+# SNIP parameters
+snip_width = 20
+snip_iter = 10
+
+# sigma bound parameters
+sigma_ub = 55
+sigma_lb = 10
+
+# delta_peak and nfev parameters
+ftol = 0.01
+nfev = 100000
+OPT_method = L-BFGS-B

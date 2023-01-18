@@ -37,9 +37,7 @@ class class_XRFitProc_webapp:
         self.tmp_fld, self.res_fld, self.input_fld = ft.organise_folder_structure()
         self.h5_path = os.path.join(self.input_fld,'xrf_flat_scan_aligned_2fit.h5')
         xrdb = xraydb.XrayDB()
-        
-        print(os.getcwd())
-        
+                
         self.temp_cmap = self.app.get_asset_url('temperature.cmap')
         self.fs = 24
         self.auc_res = 700
@@ -393,10 +391,6 @@ class class_XRFitProc_webapp:
                 info_dict = {'fit_bounds':fit_bounds, 'snip_width':snip_width, 'snip_iter':snip_iter, 'peak_centers_ch':peak_centers_ch, 'ftol':ftol, 'nfev':nfev,\
                              'OPT_method':'L-BFGS-B','sigma_bounds':sigma_bounds, 'n_lines':n_lines, 'lines_intensity':lines_intensity, 'lin_coords_lines':lin_coords_lines, 'lines_energy':lines_energy, 'lines_energy_scattering':np.concatenate((lines_energy,np.array([beam_en])),axis=0),\
                              'xdata':xdata, 'element_list':element_list, 'lines_list':lines_list, 'lines_list_user':lines_list_user, 'beam_en':beam_en, 'beam_en_ch':beam_en_ch, 'slope':slope, 'offset':offset, 'delta_peak':delta_peak, 'n_SDDs':n_SDD}
-                
-                print('checkpoint')
-                with open('saved_dictionary.pkl', 'wb') as f:
-                    pickle.dump(info_dict, f)
                     
                     
                 fig, fit_sum_exec_time = ft.plotly_xfr_sum(xrfdatasum,info_dict)

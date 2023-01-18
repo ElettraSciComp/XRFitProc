@@ -13,12 +13,14 @@ After cloning the repository locally, you will need to install and setup an [Ana
 conda create -n XRF python=3.8
 conda activate XRF
 conda install numpy scipy h5py matplotlib flask numba pandas
-conda install -c conda-forge dash dash-bootstrap-components plotly xraydb dash-html-components dash-core-components tifffile
+conda install -c conda-forge xraydb tifffile
 conda install -c numba icc_rt
+pip install dash==2.7.0 dash-bootstrap-components dash-html-components dash-core-components plotly
 ```
 
 ## Running XRFitProc
 ### Initialization
+![alt text](https://github.com/m-ippoliti/XRFitProc/blob/main/videos/initialization.mp4)
 Once the setup is complete, run the application by entering the "modules" folder and executing the following commands in a shell:
 ```
 conda activate XRF
