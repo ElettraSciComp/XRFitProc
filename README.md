@@ -26,7 +26,7 @@ conda activate XRF
 ```
 and
 
-![text](https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/Initialization.gif)
+![text](https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/initialization.gif)
 
 ```
 chmod +x run_xrfitproc.sh
