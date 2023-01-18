@@ -20,7 +20,7 @@ pip install dash==2.7.0 dash-bootstrap-components dash-html-components dash-core
 
 ## Running XRFitProc
 ### Initialization
-<img src=https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/initialization.mp4 alt="data_structure"/>
+<img src=https://github.com/ElettraSciComp/XRFitProc/blob/main/videos/Initialization.mp4 alt="initialization"/>
 Once the setup is complete, run the application by entering the "modules" folder and executing the following commands in a shell:
 ```
 conda activate XRF
