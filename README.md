@@ -58,7 +58,6 @@ where x represents the channel axis. In the above example the spectroscopic data
 
 
 ### Fit Setup
-
 <img src=https://github.com/m-ippoliti/XRFitProc/blob/main/images/GUI.png alt="data_structure"/>
 
 In the "Fit Parameters" tab, after the data has been correclty loaded, a single spectra resulting from summing together all the available pixels is displayed in the "Sum Spectra" section. The parameters in the "Fit Setup" section need now to be adjusted:
