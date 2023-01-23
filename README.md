@@ -42,7 +42,7 @@ where the port number and debugging flag can be tuned manually. Once the applica
 We have provided an example dataset [here](https://dx.doi.org/10.34965/i10645), originally acquired in a study by [Marmorato et. al.](https://doi.org/10.1016/j.toxlet.2011.08.026). In order for the application to work, the "xrf_flat_scan_aligned_2fit.h5" file present at the given link, must be saved to the folder "/XRFitProc/modules/data/input/".
 
 
-#### Create your own HDF input data
+#### Create your own HDF5 input data
 Alternatively, users can also attempt to construct their own [HDF5](https://www.hdfgroup.org/solutions/hdf5/) input file. As for the above case, the HDF5 file must be named "xrf_flat_scan_aligned_2fit.h5" and saved to the folder "/XRFitProc/modules/data/input/". The HDF5 file must also contain a Group named "dante" encapsulating the following data:
  * **beam_en**: float scalar, incident beam's energy in eV 
  * **channel_SUM**: int 2D array, spectroscopic data with shape = (number of pixels, number of channels in single pixel spectrum). This can represent a single detector or the sum of all available detectors 
